@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="add-your-filename-here.css">
+        <title>kitty frame css effect</title>
+
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 62.5%;
+            }
+
+            :root {
+                --width: 40rem;
+                --height: 40rem;
+            }
+
+            .main-div {
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+
+            .design {
+                position: relative;
+                width: var(--width);
+                height: var(--width);
+            }
+
+            .design > *, .blend > * {
+                position: absolute;
+                width: var(--width);
+                height: var(--height); 
+            }
+
+            .design > #rotate-border {
+                border: 1rem red solid;
+                transform: rotate(45deg);
+                box-shadow: 0 0 1rem red, inset 0 0 2rem red;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .data-white {
+                background: #fff;
+            }
+
+            .blend {
+                mix-blend-mode: multiply;
+            }
+
+            img {
+                object-fit: cover;
+            }
+
+            .design > img {
+                box-shadow: 0 0 2rem #bac3c3;
+            }
+
+            @media (max-width: 998px) {
+                * {
+                    font-size: 50%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                * {
+                    font-size: 47.5%;
+                }
+            }
+
+            @media (max-width: 540px) {
+                * {
+                    font-size: 43%;
+                }
+            }
+
+            @media (max-width: 450px) {
+                * {
+                    font-size: 29%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-div">
+            <div class="design">
+                <!-- First Image -->
+                <img src="https://images.unsplash.com/photo-1617182545423-bcabd1be1896?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2l0dHklMjBjYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="1st gaming console img">
+                <div id="rotate-border"></div>
+                <div class="grid">
+                    <div class="data-white"></div>
+                    <div></div>
+                    <div></div>
+                    <div class="data-white"></div>
+                </div>
+
+                <div class="blend">
+                    <!-- Second Image -->
+                    <img src="https://images.unsplash.com/photo-1617182545423-bcabd1be1896?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2l0dHklMjBjYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="2nd gaming console img">
+                    <div class="grid">
+                        <div></div>
+                        <div class="data-white"></div>
+                        <div class="data-white"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
+
